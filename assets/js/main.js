@@ -3,7 +3,7 @@ $(function () {
     $.ajaxSetup({cache: true});
 
     // Get repositories from the GitHub API.
-    if ($('#projects').length) {
+    if ($('#projectsTemp').length) {
         $.getJSON('https://api.github.com/users/jnrbsn/repos?callback=?', function (repos) {
             var i, repoCount = repos.data.length, now = Date.now(),
                 projectsActive = document.getElementById('projects-active'),
